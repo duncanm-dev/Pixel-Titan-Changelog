@@ -1,5 +1,12 @@
 # Changelog
 
+## 15/09/2022
+
+* Increased maximum timeout for dropbox-search-create Lambda to 120s.
+* Increased the lookback period to 3 hours and 20 minutes, which is the maximum possible total time after all retries occur.
+* Modified the 10 minute delay to instead be a random delay between 5 and 20 minutes (seconds resolution) in order to mitigate concurrent connection errors.
+* Fixed a KeyError when a "phone" field is not provided in the order notes.
+
 ## 14/09/2022
 
 * Increased SmugMug upload retry count to 6.
